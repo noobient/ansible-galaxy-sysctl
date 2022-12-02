@@ -1,9 +1,9 @@
 ---
-- name: "Set {{ item.option }} to {{ item.value }} in {{ item.file }}.conf"
+- name: "Set {{ option }} to {{ value }} in {{ file }}.conf"
   ini_file:
-    path: "/etc/sysctl.d/{{ item.file }}.conf"
+    path: "/etc/sysctl.d/{{ file }}.conf"
     section: null
-    option: "{{ item.option }}"
-    value: "{{ item.value }}"
+    option: "{{ option }}"
+    value: "{{ value }}"
     mode: '0644'
   notify: Reload sysctl
