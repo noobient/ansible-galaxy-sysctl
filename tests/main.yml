@@ -1,0 +1,12 @@
+---
+- hosts: 127.0.0.1
+  tasks:
+    - include_role:
+        name: "{{ playbook_dir.split('/')[:-1] | last }}"
+      vars:
+        file: "{{ item.file }}"
+        option: "{{ item.option }}"
+        value: "{{ item.value }}"
+      loop:
+        - { file: '99-wireguard', option: 'net.ipv4.ip_forward', value: '1' }
+        - { file: '99-wireguard', option: 'net.ipv6.conf.all.forwarding', value: '1' }
