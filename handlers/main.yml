@@ -1,4 +1,4 @@
 ---
-- name: Reload sysctl
+- name: "Reload sysctl values from /etc/sysctl.d/{{ file }}.conf"
   command:
     cmd: "sysctl --load=/etc/sysctl.d/{{ file }}.conf"
