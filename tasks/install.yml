@@ -1,0 +1,6 @@
+---
+- name: Install sysctl
+  package:
+    name: "procps{% if ansible_os_family == 'RedHat' %}-ng{% endif %}"
+    state: latest
+  register: installed_sysctl

@@ -1,2 +1,5 @@
 ---
+- include_tasks: install.yml
+  when: installed_sysctl is not defined
+
 - include_tasks: sysctl.yml
