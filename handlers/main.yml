@@ -1,4 +1,4 @@
 ---
 - name: Reload sysctl
-  shell:
-    cmd: sysctl -p && sysctl --system
+  command:
+    cmd: "sysctl --load=/etc/sysctl.d/{{ file }}.conf"
