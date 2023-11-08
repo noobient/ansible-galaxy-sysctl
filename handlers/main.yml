@@ -1,4 +1,4 @@
 ---
-- name: Reload sysctl
+- name: Reload sysctl # noqa no-changed-when
   command:
     cmd: "sysctl --load=/etc/sysctl.d/{{ file }}.conf"

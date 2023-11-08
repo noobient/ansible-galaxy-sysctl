@@ -1,4 +1,4 @@
-# bviktor.sysctl
+# noobient.sysctl
 
 ## Synopsys
 
