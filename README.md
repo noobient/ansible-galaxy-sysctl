@@ -16,7 +16,7 @@ This role lets you set permanent sysctl values. The changes are applied immediat
 
 ```yml
 - include_role:
-    name: bviktor.sysctl
+    name: noobient.sysctl
   vars:
     file: '99-wireguard'
     option: 'net.ipv4.ip_forward'
